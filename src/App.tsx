@@ -1,15 +1,17 @@
+// App.tsx
 import React from 'react';
-import './App.css';
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Layout from './Layout';
 import Home from './components/pages/Home/Home';
-function App() {
+
+const App: React.FC = () => {
   return (
-    <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-    </BrowserRouter>
+    <Router>
+      <Layout>
+        <Routes></Routes>
+      </Layout>
+    </Router>
   );
-}
+};
 
 export default App;
